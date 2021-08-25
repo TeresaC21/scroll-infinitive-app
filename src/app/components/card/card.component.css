@@ -1,0 +1,31 @@
+.card:hover {
+    box-shadow: 1px 2px 2px 3px rgba(0, 0, 0, 0.2) !important;
+    transition: box-shadow 1s;
+}
+
+.pt-card-ct {
+    padding-top: 4.8rem;
+}
+
+.badge-bulb-ct {
+    margin-top: -6rem;
+    height: 60px;
+}
+
+.badge-clipboard-ct {
+    margin-top: -4.5rem; 
+    margin-left: 1rem;
+}
+
+.far.fa-star:hover {
+    color: rgb(209, 125, 0) !important;
+    transition: color 1s !important;
+    cursor: pointer;
+}
+
+@media (min-width: 992px) { 
+    .pp-l {
+        padding-left: 2.5rem;
+    }
+ }
+

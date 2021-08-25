@@ -1,0 +1,85 @@
+<div class="mr-2">
+  <!-- Initial to Scroll library -->
+  <div class="search-results" infiniteScroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="1000"
+    [infiniteScrollDisabled]="blockInfiniteScroll" (scrolled)="onScrollDown()">
+    <!-- Card -->
+    <div *ngFor="let entry of entries" class="card shadow container rounded mb-5 border-0 w-100 pt-card-ct">
+      <div class="d-flex">
+        <!-- badge bulb -->
+        <span class="badge shadow rounded bg-prime p-3 badge-bulb-ct">
+          <i class="far fa-2x fa-lightbulb"></i>
+        </span>
+        <!-- badge clipboard -->
+        <span class="badge-clipboard-ct effects">
+          <i class="fas fa-2x fa-clipboard-list text-secondary"></i>
+        </span>
+      </div>
+
+      <div class="pp-l">
+        <div class="row flex-column flex-md-row g-0">
+          <!-- image -->
+          <div class="col col-md-4 order-1 order-md-1">
+            <img src={{entry.imageUrl}} class="img-fluid rounded-start shadow-lg" alt="...">
+          </div>
+          <!-- titles -->
+          <div class="col col-md-3 order-3 order-md-2">
+            <div class="card-body py-0 py-md-2">
+              <h5 class="card-title mt-md-5 text-center text-md-start effects">{{entry.id}} {{entry.title}}</h5>
+            </div>
+          </div>
+          <!-- right info -->
+          <div class="col col-md-5 order-2 order-md-3">
+            <div class="card-body d-flex flex-column align-items-center align-items-md-end">
+              <div class="d-flex justify-md-content-end">
+                <p class="text-secondary d-none d-md-block mb-0 mb-md-1">Posted</p>
+                <p class="mx-1 mb-0 mb-md-1"><span class="text-prime effects-text">{{entry.author}}</span></p>
+                <p class="mx-1 mb-0 mb-md-1"><i class="far fa-star text-warning"></i></p>
+                <p class="mx-1 mb-0 mb-md-1"><i class="far fa-star text-warning"></i></p>
+                <p class="mx-1 mb-0 mb-md-1"><i class="far fa-star text-warning"></i></p>
+                <p class="mx-1 mb-0 mb-md-1"><i class="far fa-star text-warning"></i></p>
+                <p class="mx-1 mb-0 mb-md-1"><i class="far fa-star text-warning"></i></p>
+                <span class="text-secondary">()</span>
+              </div>
+              <p class="card-text text-secondary"><span><i class="far fa-calendar-alt"></i></span> Jun 27, 2019 12:00 PM
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <!-- below info -->
+          <div class="row mt-3">
+            <div class="col-md-4 d-flex flex-column-reverse flex-md-row ">
+              <div class="d-flex col-lg-4 flex-column text-center text-md-start mx-1">
+                <p class="mb-0">Assigness</p>
+                <p class="text-prime effects-text">{{entry.assigness}}</p>
+              </div>
+              <div class="d-flex col-lg-4 flex-column text-center text-md-start mx-1">
+                <p class="mb-0">Workflow</p>
+                <p class="text-prime effects-text"> {{entry.workflow}} </p>
+              </div>
+              <div class="d-flex col-lg-4 flex-column align-items-center align-items-md-start mx-1">
+                <p class="mb-0">Review Score</p>
+                <p class="badge rounded-pill bg-warning text-center rounded px-2 effects" style="width: 33px;">---</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading -->
+    <div *ngIf="showLoading" class="d-flex justify-content-center my-5">
+      <div class="spinner-grow text-danger mx-2" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div class="spinner-grow text-warning mx-2" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div class="spinner-grow text-prime mx-2" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </div>
+
+</div>
