@@ -1,27 +1,68 @@
 # EzassiChallenge
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+In this case we need create a web application width Angular 5 mainly, based on mock 
 
-## Development server
+# Feature
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Use Angular 5
+- Use the npm pagackage ngx-infinite-scroll
+- For data random we use faker js In this case, searched version compatible width this version on Angular, also we can base in the year nearly with version [faker npm](https://www.npmjs.com/package/faker) 
 
-## Code scaffolding
+# Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [Install Angular](cli.angular.io/) version Angular 5 is necessary include @angular/cli
+```sh
+    npm insatall -g @angular/cli
+```
+- Create project
+```sh
+    ng new name-project
+```
+- Enter to project
+```sh
+    cd name-project
+```
+- Make a server for view project in our local
+```sh
+   ng serve
+```
 
-## Build
+# Faker js
+- Install
+    - 
+```sh
+     npm i faker@4.1.0
+     npm i @types/faker4.1.2
+```
+- For angular is necessary install types based on this documentation [faker npm](https://github.com/Marak/faker.js/issues/650) but remember is important the version above was mencioned.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+```sh
+     npm i faker@4.1.0
+     npm i @types/faker4.1.2
 
-## Running unit tests
+     or
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+     npm install faker --save
+     npm install @types/faker --save 
+```
+ 
+ - Then import into service/file/whatever like:
+ ```js
+   import * as faker from 'faker';
+```
 
-## Running end-to-end tests
+# Other recourses
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+[Documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+[ngx-scroll-infinite](https://www.npmjs.com/package/ngx-infinite-scroll)
+[Angular](https://angular.io/)
+[Udemy course](https://www.udemy.com/course/angular-2-fernando-herrera/)
+[types](https://www.npmjs.com/package/@types/faker/v/4.1.2)
+[Info](https://www.youtube.com/watch?v=eKid30qJSn8)
+[Info](https://www.youtube.com/watch?v=AR1tLGQ7COs)
+[Info](https://www.youtube.com/watch?v=AR1tLGQ7COs)
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+✨ challenge by Ezassi Technology ✨
+
